@@ -74,11 +74,11 @@ public class Calculator {
 	
 	/**
 	 * @param prefix
-	 * @param result
+	 * @param f
 	 * This method prints out computation result.
 	 */
-	void print(String prefix, int result) {
-		System.out.println(prefix + " " + result);
+	void print(String prefix, float f) {
+		System.out.println(prefix + " " + f);
 	}
 
 	int sum(int first, int second) {
@@ -99,10 +99,13 @@ public class Calculator {
 		return first * second;
 	}
 
-	int divide(int first, int second) {
+	float divide(int first, int second) {
 		countForAnyCompution++;
 		localCount++;
-		return first / second;
+		
+		if(second == 0) return (float)Double.NaN; 
+		
+		return (float)first / (float)second;
 	}
 
 	int mod(int first, int second) {
