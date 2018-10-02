@@ -108,9 +108,13 @@ public class Calculator {
 		return (float)first / (float)second;
 	}
 
-	int mod(int first, int second) {
-		// TODO implement the body of this method
-		return 0;
+	float mod(int first, int second) {
+		countForAnyCompution++;
+		localCount++;
+		
+		if(second == 0) return (float)Double.NaN; 
+		
+		return (float)first % (float)second;
 	}
 
 	static int getCount() {
