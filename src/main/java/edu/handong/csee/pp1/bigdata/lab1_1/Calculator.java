@@ -68,8 +68,7 @@ public class Calculator {
 		print("SUM:" , sum(firstIntArg, secondIntArg));
 		print("SUB:" , this.subtract(firstIntArg, secondIntArg));
 		print("*:" , multiply(firstIntArg, secondIntArg));
-		print("DV:" , divide(firstIntArg,secondIntArg));
-		print("MOD:" , mod(firstIntArg,secondIntArg));
+		print("DV:" , divide(firstIntArg,secondIntArg)); 
 	}
 
 	
@@ -110,12 +109,7 @@ public class Calculator {
 	}
 
 	float mod(int first, int second) {
-		countForAnyCompution++;
-		localCount++;
-		
-		if(second == 0) return (float)Double.NaN; 
-		
-		return (float)first % (float)second;
+		// TODO Complete this test case
 	}
 
 	static int getCount() {
